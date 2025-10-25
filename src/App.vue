@@ -73,6 +73,21 @@
         />
         <span class="time-display">{{ formatTime(duration) }}</span>
       </div>
+
+      <!-- ボリュームセクション -->
+      <div class="volume-section">
+        <button @click="toggleMute" class="volume-btn">
+          <span class="material-icons">{{ getVolumeIcon() }}</span>
+        </button>
+        <input
+          type="range"
+          class="volume-bar"
+          :value="volume"
+          min="0"
+          max="100"
+          @input="onVolumeChange"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -89,6 +104,8 @@ const currentTime = ref(0)
 const duration = ref(0)
 const isSeeking = ref(false)
 const isFullscreen = ref(false)
+const volume = ref(50)
+const isMuted = ref(false)
 let updateInterval = null
 
 // アルバムデータの読み込み
@@ -143,6 +160,10 @@ const initPlayer = () => {
 const onPlayerReady = (event) => {
   updateDuration()
   startTimeUpdate()
+  // 初期ボリュームを設定
+  if (player.value && player.value.setVolume) {
+    player.value.setVolume(volume.value)
+  }
 }
 
 // プレイヤーの状態変化
@@ -295,6 +316,45 @@ const toggleFullscreen = () => {
 // フルスクリーン状態の監視
 const handleFullscreenChange = () => {
   isFullscreen.value = !!document.fullscreenElement
+}
+
+// ボリューム変更
+const onVolumeChange = (event) => {
+  const newVolume = parseInt(event.target.value)
+  volume.value = newVolume
+  if (player.value && player.value.setVolume) {
+    player.value.setVolume(newVolume)
+  }
+  if (newVolume > 0 && isMuted.value) {
+    isMuted.value = false
+    if (player.value && player.value.unMute) {
+      player.value.unMute()
+    }
+  }
+}
+
+// ミュートトグル
+const toggleMute = () => {
+  if (!player.value) return
+
+  if (isMuted.value) {
+    player.value.unMute()
+    isMuted.value = false
+  } else {
+    player.value.mute()
+    isMuted.value = true
+  }
+}
+
+// ボリュームアイコンの取得
+const getVolumeIcon = () => {
+  if (isMuted.value || volume.value === 0) {
+    return 'volume_off'
+  } else if (volume.value < 50) {
+    return 'volume_down'
+  } else {
+    return 'volume_up'
+  }
 }
 
 // マウント時の処理
