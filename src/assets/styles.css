@@ -286,6 +286,82 @@ body {
     border-radius: 3px;
 }
 
+/* ボリュームセクション */
+.volume-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.volume-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.volume-btn .material-icons {
+    font-size: 24px;
+}
+
+/* ボリュームバー */
+.volume-bar {
+    width: 100px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.volume-bar::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.volume-bar::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.volume-bar::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+.volume-bar::-moz-range-track {
+    background: rgba(255, 255, 255, 0.3);
+    height: 6px;
+    border-radius: 3px;
+}
+
 /* スクロールバーのスタイル */
 .right-column::-webkit-scrollbar {
     width: 8px;
