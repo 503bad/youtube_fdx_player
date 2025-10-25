@@ -1,0 +1,87 @@
+[
+  {
+    "videoId": "tikfqQFqM9I",
+    "albumTitle": "13th「OracLE」",
+    "thumbnail": "images/album_13.png",
+    "isNew": true,
+    "timestamps": [
+      { "time": 0, "trackName": "Blood", "description": "パワーと疾走感あふれ、メロディアス！内に秘めたお前の稲光が導く！激推の1曲。" },
+      { "time": 21, "trackName": "OracLE", "description": "メロハー！シンガロングも楽しい優しくも力強い、今作のタイトル曲。" },
+      { "time": 63, "trackName": "W.A.H.M", "description": "重厚感！我々こそがヘヴィメタルだ！！" },
+      { "time": 81, "trackName": "Breaking all of bad", "description": "軽快な80’s味のグラムメタル。熱いバディ物" },
+      { "time": 109, "trackName": "Long road", "description": "深く燃えるメロハー「誰にも理解されなくても、俺はお前の努力を知っている」" },
+      { "time": 141, "trackName": "Heartbreaker", "description": "疾走感あふれる、猛る心を歌う楽曲" },
+      { "time": 164, "trackName": "Rusty", "description": "パワーバラード系。お前の道は誰にも譲るな！" },
+      { "time": 191, "trackName": "Implode", "description": "グラムメタル系。爆発！嵐！雷鳴！" },
+      { "time": 224, "trackName": "Reject", "description": "久しぶりの全編英語楽曲。 *ボーナストラック" },
+      { "time": 245, "trackName": "Five O Tempest", "description": "熱く猛る弊バンドの代表曲をリマスター。「示せ！鋼の決意を！」 *ボーナストラック" },
+      { "time": 268, "trackName": "Flag of lives(Live)", "description": "最大火力のライブ専用楽曲。ライブ音源。 *ボーナストラック" }
+    ]
+  },
+  {
+    "videoId": "1YLQsO11KkM",
+    "albumTitle": "12th「Lightning」",
+    "thumbnail": "images/album_12.jpg",
+    "isNew": false,
+    "timestamps": [
+      { "time": 0, "trackName": "Track 1", "description": "雷鳴のような激しいロックサウンド" },
+      { "time": 200, "trackName": "Track 2", "description": "ミドルテンポの叙情的なメロディ" },
+      { "time": 400, "trackName": "Track 3", "description": "スピード感あふれるラストナンバー" }
+    ]
+  },
+  {
+    "videoId": "s571Zfoztjo",
+    "albumTitle": "11th「MySOUL」",
+    "thumbnail": "images/album_11.jpg",
+    "isNew": false,
+    "timestamps": [
+      { "time": 0, "trackName": "Track 1", "description": "魂を込めた熱いメッセージソング" },
+      { "time": 190, "trackName": "Track 2", "description": "アコースティックアレンジの優しい曲調" },
+      { "time": 380, "trackName": "Track 3", "description": "全力で駆け抜けるラストチューン" }
+    ]
+  },
+  {
+    "videoId": "6nZUTGspuHk",
+    "albumTitle": "10th「NextRound」",
+    "thumbnail": "images/album_10.jpg",
+    "isNew": false,
+    "timestamps": [
+      { "time": 0, "trackName": "Track 1", "description": "新たな挑戦を予感させる前向きなナンバー" },
+      { "time": 210, "trackName": "Track 2", "description": "切ないメロディが印象的な楽曲" },
+      { "time": 420, "trackName": "Track 3", "description": "次のステージへ向かう希望の歌" }
+    ]
+  },
+  {
+    "videoId": "c5r23zrtnt4",
+    "albumTitle": "9th「POWER_CODE」",
+    "thumbnail": "images/album_09.jpg",
+    "isNew": false,
+    "timestamps": [
+      { "time": 0, "trackName": "Track 1", "description": "パワフルなギターリフが炸裂するオープニング" },
+      { "time": 195, "trackName": "Track 2", "description": "哀愁漂うメロディアスなロックバラード" },
+      { "time": 390, "trackName": "Track 3", "description": "圧倒的なエネルギーを放つアンセム" }
+    ]
+  },
+  {
+    "videoId": "67_DckSbhpw",
+    "albumTitle": "7th「Hellfire Explosion And Death With Love」",
+    "thumbnail": "images/album_07.jpg",
+    "isNew": false,
+    "timestamps": [
+      { "time": 0, "trackName": "Track 1", "description": "地獄の業火を思わせる激烈なサウンド" },
+      { "time": 220, "trackName": "Track 2", "description": "愛と死を歌う壮大なバラード" },
+      { "time": 440, "trackName": "Track 3", "description": "全てを焼き尽くす衝撃のフィナーレ" }
+    ]
+  },
+  {
+    "videoId": "2yBmwegxmSI",
+    "albumTitle": "5th「503 bad gateway」",
+    "thumbnail": "images/album_05.jpg",
+    "isNew": false,
+    "timestamps": [
+      { "time": 0, "trackName": "Track 1", "description": "王道のロックサウンドが響き渡る" },
+      { "time": 180, "trackName": "Track 2", "description": "心に染みる感動的なメロディ" },
+      { "time": 360, "trackName": "Track 3", "description": "希望に満ちたアップテンポナンバー" }
+    ]
+  }
+]

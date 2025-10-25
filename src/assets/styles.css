@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    background-color: #000;
+    color: #FFFFFF;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* ロゴヘッダー */
+.logo-header {
+    background-color: #e66f00;
+    padding: 3px 15px;
+    text-align: left;
+}
+
+.logo-header h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+}
+
+/* メインコンテナ */
+.main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* 左カラム: 動画プレビュー */
+.left-column {
+    width: 35%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+#player {
+    width: 100%;
+    height: 100%;
+}
+
+/* 右カラム: アルバムリスト */
+.right-column {
+    width: 65%;
+    background-color: #242424ff;
+    overflow-y: auto;
+}
+
+.album-list {
+    height: 100%;
+}
+
+/* アルバムセクション */
+.album-section {
+    border-bottom: 1px solid #808080;
+}
+
+/* アルバムヘッダー */
+.album-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.album-header:hover {
+    background-color: #333;
+}
+
+.album-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.album-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.album-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    letter-spacing: 0.05em;
+}
+
+.new-badge {
+    background-color: #ff4444;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* 楽曲リスト */
+.track-list {
+    background-color: #1a1a1a;
+}
+
+.track-item {
+    padding: 10px 20px 10px 35px;
+    border-bottom: 1px solid #808080;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.track-item:hover {
+    background-color: #2a2a2a;
+}
+
+.track-item.active {
+    background-color: #e66f00;
+    font-weight: 500;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 38px;
+}
+
+.track-name {
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 0.03em;
+    min-width: 120px;
+}
+
+.track-description {
+    font-size: 13px;
+    color: #b0b0b0;
+    letter-spacing: 0.02em;
+    font-weight: 300;
+}
+
+.track-item.active .track-description {
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+/* コントロールバー */
+.control-bar {
+    background-color: #e66f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 3px 20px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.control-btn .material-icons {
+    font-size: 36px;
+}
+
+/* シークバーセクション */
+.seek-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.time-display {
+    font-size: 14px;
+    font-weight: 300;
+    color: #FFFFFF;
+    min-width: 40px;
+    text-align: center;
+}
+
+/* シークバー */
+.seek-bar {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.seek-bar::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.seek-bar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.seek-bar::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+.seek-bar::-moz-range-track {
+    background: rgba(255, 255, 255, 0.3);
+    height: 6px;
+    border-radius: 3px;
+}
+
+/* スクロールバーのスタイル */
+.right-column::-webkit-scrollbar {
+    width: 8px;
+}
+
+.right-column::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.right-column::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+.right-column::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* レスポンシブ対応(横置き専用) */
+@media (orientation: portrait) {
+    body::before {
+        content: "このアプリは横置きモードでご利用ください";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        text-align: center;
+        z-index: 9999;
+    }
+}
