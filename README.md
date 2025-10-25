@@ -1,0 +1,2 @@
+# youtube_fdx_player
+Youtubeで公開しているFDXを、スマホで再生しやすくするプレイヤーです。
