@@ -3,6 +3,9 @@
     <!-- バンドロゴ -->
     <header class="logo-header">
       <h1>503 bad gateway</h1>
+      <button @click="toggleFullscreen" class="fullscreen-btn">
+        <span class="material-icons">{{ isFullscreen ? 'fullscreen_exit' : 'fullscreen' }}</span>
+      </button>
     </header>
 
     <!-- メインコンテナ -->
@@ -85,6 +88,7 @@ const currentTrack = ref(null)
 const currentTime = ref(0)
 const duration = ref(0)
 const isSeeking = ref(false)
+const isFullscreen = ref(false)
 let updateInterval = null
 
 // アルバムデータの読み込み
@@ -277,11 +281,30 @@ const formatTime = (seconds) => {
   return `${mins}:${secs.toString().padStart(2, '0')}`
 }
 
+// フルスクリーンのトグル
+const toggleFullscreen = () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(err => {
+      console.error('フルスクリーンエラー:', err)
+    })
+  } else {
+    document.exitFullscreen()
+  }
+}
+
+// フルスクリーン状態の監視
+const handleFullscreenChange = () => {
+  isFullscreen.value = !!document.fullscreenElement
+}
+
 // マウント時の処理
 onMounted(async () => {
   await loadAlbums()
   await loadYouTubeAPI()
   initPlayer()
+
+  // フルスクリーン状態の監視を開始
+  document.addEventListener('fullscreenchange', handleFullscreenChange)
 })
 
 // アンマウント時の処理
@@ -292,6 +315,8 @@ onUnmounted(() => {
   if (player.value && player.value.destroy) {
     player.value.destroy()
   }
+  // フルスクリーンイベントリスナーを削除
+  document.removeEventListener('fullscreenchange', handleFullscreenChange)
 })
 </script>
 

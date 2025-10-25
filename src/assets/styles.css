@@ -23,7 +23,9 @@ body {
 .logo-header {
     background-color: #e66f00;
     padding: 3px 15px;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo-header h1 {
@@ -31,6 +33,27 @@ body {
     font-weight: 500;
     color: #FFFFFF;
     letter-spacing: 0.1em;
+}
+
+.fullscreen-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fullscreen-btn .material-icons {
+    font-size: 24px;
 }
 
 /* メインコンテナ */
